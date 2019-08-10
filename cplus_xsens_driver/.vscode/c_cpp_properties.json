@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/csc104-zjc/tony_ws/devel/include",
+                "/opt/ros/kinetic/include",
+                "/home/csc104-zjc/tony_ws/src/tony_drivers/cplus_xsens_driver/include",
+                "/home/csc104-zjc/tony_ws/src/tony_drivers/spinnaker_camera_driver/include",
+                "/home/csc104-zjc/tony_ws/src/tony_drivers/velodyne/velodyne_laserscan/include",
+                "/home/csc104-zjc/tony_ws/src/tony_drivers/velodyne/velodyne_driver/include",
+                "/home/csc104-zjc/tony_ws/src/tony_drivers/velodyne/velodyne_pointcloud/include",
+                "/usr/include"
+            ],
+            "name": "Linux",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
