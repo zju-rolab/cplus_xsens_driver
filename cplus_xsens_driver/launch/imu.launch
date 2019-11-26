@@ -1,0 +1,7 @@
+<launch>
+
+  <node pkg="cplus_xsens_driver" type="mtnode" name="xsens_node">
+  <param name="gps_enable" type="bool" value="false"/>
+  </node>
+
+</launch>
