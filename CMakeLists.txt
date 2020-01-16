@@ -49,8 +49,8 @@ find_package(catkin REQUIRED COMPONENTS
 
 ## Generate messages in the 'msg' folder
 add_message_files(FILES
-  mt_message.msg
-  packet_counter.msg
+  MTMessage.msg
+  PacketCounter.msg
 )
 
 ## Generate services in the 'srv' folder

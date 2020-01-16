@@ -231,13 +231,13 @@ void MTDevice::parse()
         for (int i = 0; i < message_.len; ++i)
           checksum += message_.data[i];
         checksum += message_.checksum;
-        ROS_WARN("RIGHT MESSAGE BUFFER SIZE IS %u",buf_.size());
+        ROS_WARN("RIGHT MESSAGE BUFFER SIZE IS %lu",buf_.size());
         if ((checksum & 0xff) != 0x00) {
           ROS_ERROR("/** Wrong checksum:%02x **/\n", checksum);
           ROS_ERROR("BID=%02x, MID=%02x, len=%02x(%d), checksum=%02x\n",
                     message_.bid, message_.mid, message_.len, message_.len,
                     message_.checksum);
-          ROS_ERROR("WRONG BUFFER SIZE IS %u",buf_.size());
+          ROS_ERROR("WRONG BUFFER SIZE IS %lu",buf_.size());
           for (int i = 0; i < message_.len; ++i) {
             ROS_ERROR("%02x ", message_.data[i]);
           }
