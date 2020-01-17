@@ -17,7 +17,7 @@
 
 #include <cplus_xsens_driver/MtType.hpp>
 #include <cplus_xsens_driver/PacketCounter.h>
-#include <cplus_xsens_driver/mt_message.h>
+#include <cplus_xsens_driver/MTMessage.h>
 
 #define MAX_MESSAGE_LENGTH 128
 #define BAG_ABANDON 800
@@ -82,7 +82,7 @@ public:
   ros::Publisher imu_packet_counter_pub;
 
   sensor_msgs::Imu imu_message;
-  cplus_xsens_driver::mt_message device;
+  cplus_xsens_driver::MTMessage device;
   cplus_xsens_driver::PacketCounter packet_counter_;
 
 private:
@@ -122,7 +122,7 @@ MTDevice::MTDevice() : buf_(8 * MAX_MESSAGE_LENGTH, 0), step_(0)
 
   imu_data_pub = nh.advertise<sensor_msgs::Imu>("xsens/imu_data", 100);
   imu_device_pub =
-      nh.advertise<cplus_xsens_driver::mt_message>("xsens/device_info", 100);
+      nh.advertise<cplus_xsens_driver::MTMessage>("xsens/device_info", 100);
   imu_packet_counter_pub = nh.advertise<cplus_xsens_driver::PacketCounter>(
       "xsens/packet_counter", 100);
 
